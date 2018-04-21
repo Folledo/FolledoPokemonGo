@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sFf-eq-XCW">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="AkJ-Og-dGK">
+            <objects>
+                <viewController id="sFf-eq-XCW" userLabel="Map View Controller" customClass="MapViewController" customModule="FolledoPokemonGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oyF-Co-3rv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WGV-bl-0oj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sFf-eq-XCW" id="tsD-xn-tyY"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WGV-bl-0oj" firstAttribute="trailing" secondItem="RgW-lb-M8x" secondAttribute="trailing" id="4Qv-Eo-zJX"/>
+                            <constraint firstItem="WGV-bl-0oj" firstAttribute="leading" secondItem="RgW-lb-M8x" secondAttribute="leading" id="58m-aI-7eJ"/>
+                            <constraint firstItem="WGV-bl-0oj" firstAttribute="bottom" secondItem="RgW-lb-M8x" secondAttribute="bottom" id="OFv-Tq-9SV"/>
+                            <constraint firstItem="WGV-bl-0oj" firstAttribute="top" secondItem="oyF-Co-3rv" secondAttribute="top" id="kLT-2Y-cBS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RgW-lb-M8x"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="WGV-bl-0oj" id="HKQ-fs-CqI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JdB-Xt-nfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.80000000000001" y="156.97151424287858"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Huu-3L-Qgj">
+            <objects>
+                <viewController storyboardIdentifier="ARViewController" id="SBL-Ba-5ED" customClass="ViewController" customModule="FolledoPokemonGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fhR-7S-6OS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ss-a1-hd3" userLabel="Scene View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </sceneKitView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWh-az-1qB" userLabel="Left Indicator">
+                                <rect key="frame" x="20" y="358" width="16" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6x-EJ-az7" userLabel="Right Indicator">
+                                <rect key="frame" x="383" y="358" width="16" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2ss-a1-hd3" firstAttribute="trailing" secondItem="3jj-CT-oN9" secondAttribute="trailing" id="HPH-TC-10D"/>
+                            <constraint firstItem="2ss-a1-hd3" firstAttribute="top" secondItem="fhR-7S-6OS" secondAttribute="top" id="IVA-AO-Nr9"/>
+                            <constraint firstItem="2ss-a1-hd3" firstAttribute="leading" secondItem="3jj-CT-oN9" secondAttribute="leading" id="hmt-Az-mgg"/>
+                            <constraint firstItem="2ss-a1-hd3" firstAttribute="bottom" secondItem="3jj-CT-oN9" secondAttribute="bottom" id="r9v-Or-8fR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3jj-CT-oN9"/>
+                    </view>
+                    <connections>
+                        <outlet property="leftIndicator" destination="AWh-az-1qB" id="b7E-qM-BcC"/>
+                        <outlet property="rightIndicator" destination="u6x-EJ-az7" id="jnE-fU-3a0"/>
+                        <outlet property="sceneView" destination="2ss-a1-hd3" id="VQG-4Z-FvH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwm-hR-XMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952.17391304347836" y="155.70652173913044"/>
+        </scene>
+    </scenes>
+</document>
