@@ -39,13 +39,13 @@ class MapViewController: UIViewController, ARControllerDelegate {
     
     
     func setUpLocations() { //p.2
-        let firstTarget = ARItem(itemDescription: "wolf", location: CLLocation(latitude: 40.733956, longitude: -74.068171), itemNode: nil) //wolf in 0,0
+        let firstTarget = ARItem(itemDescription: "wolf", location: CLLocation(latitude: 40.525206, longitude: -74.441388), itemNode: nil) //wolf in 0,0
         targets.append(firstTarget)
         
-        let secondTarget = ARItem(itemDescription: "wolf", location: CLLocation(latitude: 40.733957, longitude: -74.068172), itemNode: nil) //wolf in 0,0
+        let secondTarget = ARItem(itemDescription: "wolf", location: CLLocation(latitude: 40.525206, longitude: -74.441388), itemNode: nil) //wolf in 0,0
         targets.append(secondTarget)
         
-        let thirdTarget = ARItem(itemDescription: "dragon", location: CLLocation(latitude: 40.733954, longitude: -74.068168), itemNode: nil) //dragon in 0,0
+        let thirdTarget = ARItem(itemDescription: "dragon", location: CLLocation(latitude: 40.525206, longitude: -74.441388), itemNode: nil) //dragon in 0,0
         targets.append(thirdTarget)
         
         for item in targets { //p. 3 iterate through all items inside the targets array and add annotation for each target
